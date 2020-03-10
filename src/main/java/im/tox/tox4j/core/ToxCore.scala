@@ -521,4 +521,11 @@ trait ToxCore extends Closeable with ToxCoreEventSynth {
   @throws[ToxFriendCustomPacketException]
   def friendSendLosslessPacket(friendNumber: ToxFriendNumber, @NotNull data: ToxLosslessPacket): Unit
 
+  // ================================================================================================
+  // Group
+  // ================================================================================================
+  @throws[ToxGroupException]
+  def newGroup(@NotNull groupName: String): ToxGroupNumber
+
+  def getGroupChatId(groupNumber: ToxGroupNumber): ToxGroupChatId
 }

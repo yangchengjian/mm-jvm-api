@@ -32,4 +32,5 @@ object ToxCryptoConstants {
   val ZeroBytes = 32
   val BoxZeroBytes = 16
 
+  val GroupChatIdLength = 32
 }
