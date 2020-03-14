@@ -3,7 +3,7 @@ package im.tox.tox4j.core.exceptions;
 import im.tox.tox4j.exceptions.ToxException;
 import org.jetbrains.annotations.NotNull;
 
-public final class ToxGroupNumberException extends ToxException<ToxGroupNumberException.Code> {
+public final class ToxConferenceNumberException extends ToxException<ToxConferenceNumberException.Code> {
 
   public enum Code {
     /**
@@ -16,11 +16,11 @@ public final class ToxGroupNumberException extends ToxException<ToxGroupNumberEx
     NULL,
   }
 
-  public ToxGroupNumberException(@NotNull Code code) {
+  public ToxConferenceNumberException(@NotNull Code code) {
     this(code, "");
   }
 
-  public ToxGroupNumberException(@NotNull Code code, String message) {
+  public ToxConferenceNumberException(@NotNull Code code, String message) {
     super(code, message);
   }
 

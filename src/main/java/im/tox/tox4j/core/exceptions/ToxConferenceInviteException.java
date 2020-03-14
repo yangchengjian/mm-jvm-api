@@ -3,7 +3,7 @@ package im.tox.tox4j.core.exceptions;
 import im.tox.tox4j.exceptions.ToxException;
 import org.jetbrains.annotations.NotNull;
 
-public final class ToxGroupInviteException extends ToxException<ToxGroupInviteException.Code> {
+public final class ToxConferenceInviteException extends ToxException<ToxConferenceInviteException.Code> {
 
   public enum Code {
     /**
@@ -14,11 +14,11 @@ public final class ToxGroupInviteException extends ToxException<ToxGroupInviteEx
     NO_CONNECTION,
   }
 
-  public ToxGroupInviteException(@NotNull Code code) {
+  public ToxConferenceInviteException(@NotNull Code code) {
     this(code, "");
   }
 
-  public ToxGroupInviteException(@NotNull Code code, String message) {
+  public ToxConferenceInviteException(@NotNull Code code, String message) {
     super(code, message);
   }
 

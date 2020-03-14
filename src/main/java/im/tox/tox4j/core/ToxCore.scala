@@ -524,15 +524,15 @@ trait ToxCore extends Closeable with ToxCoreEventSynth {
   // ================================================================================================
   // Group
   // ================================================================================================
-  @throws[ToxGroupNewException]
-  def groupNew(@NotNull groupName: String): ToxGroupNumber
+  @throws[ToxConferenceNewException]
+  def conferenceNew(): ToxConferenceNumber
 
-  @throws[ToxGroupChatIdException]
-  def groupChatId(groupNumber: ToxGroupNumber): ToxGroupChatId
+  @throws[ToxConferenceNumberException]
+  def conferenceNumber(@NotNull conferenceId: ToxConferenceId): ToxConferenceNumber
 
-  @throws[ToxGroupInviteException]
-  def groupInvite(friendNumber: ToxFriendNumber, groupNumber: ToxGroupNumber): Unit
+  @throws[ToxConferenceIdException]
+  def conferenceId(conferenceNumber: ToxConferenceNumber): ToxConferenceId
 
-  @throws[ToxGroupNumberException]
-  def groupNumber(@NotNull groupChatId: ToxGroupChatId): ToxGroupNumber
+  @throws[ToxConferenceInviteException]
+  def conferenceInvite(friendNumber: ToxFriendNumber, conferenceNumber: ToxConferenceNumber): Unit
 }

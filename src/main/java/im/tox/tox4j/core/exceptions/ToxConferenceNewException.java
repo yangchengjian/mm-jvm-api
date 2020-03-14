@@ -4,17 +4,17 @@ import im.tox.tox4j.exceptions.JavaOnly;
 import im.tox.tox4j.exceptions.ToxException;
 import org.jetbrains.annotations.NotNull;
 
-public final class ToxGroupNewException extends ToxException<ToxGroupNewException.Code> {
+public final class ToxConferenceNewException extends ToxException<ToxConferenceNewException.Code> {
 
   public enum Code {
     INIT,
   }
 
-  public ToxGroupNewException(@NotNull Code code) {
+  public ToxConferenceNewException(@NotNull Code code) {
     this(code, "");
   }
 
-  public ToxGroupNewException(@NotNull Code code, String message) {
+  public ToxConferenceNewException(@NotNull Code code, String message) {
     super(code, message);
   }
 
