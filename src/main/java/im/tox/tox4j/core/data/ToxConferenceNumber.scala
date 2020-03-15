@@ -9,6 +9,6 @@ case object ToxConferenceNumber extends BoundedIntCompanion[ToxConferenceNumber]
   override def unsafeFromInt(value: Int): ToxConferenceNumber = new ToxConferenceNumber(value)
   override def toInt(self: ToxConferenceNumber): Int = self.value
 
-  implicit val ordToxGroupNumber: Ordering[ToxConferenceNumber] = Ordering.by(_.value)
+  implicit val ordToxConferenceNumber: Ordering[ToxConferenceNumber] = Ordering.by(_.value)
 
 }

@@ -535,4 +535,10 @@ trait ToxCore extends Closeable with ToxCoreEventSynth {
 
   @throws[ToxConferenceInviteException]
   def conferenceInvite(friendNumber: ToxFriendNumber, conferenceNumber: ToxConferenceNumber): Unit
+
+  @throws[ToxConferenceJoinException]
+  def conferenceJoin(friendNumber: ToxFriendNumber, @NotNull cookie: ToxConferenceCookie): ToxConferenceNumber
+
+  @throws[ToxConferenceSendMessageException]
+  def conferenceSendMessage(conferenceNumber: ToxConferenceNumber, @NotNull messageType: ToxMessageType, timeDelta: Int, @NotNull message: ToxConferenceMessage): Boolean
 }

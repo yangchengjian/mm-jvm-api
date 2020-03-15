@@ -1,6 +1,6 @@
 package im.tox.tox4j.core.callbacks
 
-import im.tox.tox4j.core.data.{ ToxConferenceNumber, ToxFriendNumber, ToxPublicKey, ToxNickname }
+import im.tox.tox4j.core.data.{ ToxConferenceNumber, ToxFriendNumber, ToxPeerNumber, ToxPublicKey, ToxNickname }
 import im.tox.tox4j.core.enums.{ ToxConferenceType, ToxFileControl, ToxMessageType, ToxConnection, ToxUserStatus }
 import org.jetbrains.annotations.NotNull
 
@@ -22,4 +22,5 @@ trait ToxCoreEventSynth {
   def invokeFriendLosslessPacket(friendNumber: ToxFriendNumber, @NotNull data: Array[Byte]): Unit
   def invokeSelfConnectionStatus(@NotNull connectionStatus: ToxConnection): Unit
   def invokeConferenceInvite(friendNumber: ToxFriendNumber, @NotNull conferenceType: ToxConferenceType, timeDelta: Int, @NotNull cookie: Array[Byte]): Unit
+  def invokeConferenceMessage(conferenceNumber: ToxConferenceNumber, peerNumber: ToxPeerNumber, @NotNull messageType: ToxMessageType, timeDelta: Int, @NotNull message: Array[Byte]): Unit
 }
