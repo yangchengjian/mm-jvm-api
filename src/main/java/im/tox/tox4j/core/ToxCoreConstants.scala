@@ -61,6 +61,8 @@ object ToxCoreConstants {
    */
   val MaxHostnameLength = 255
 
+  val MaxCookieLength = 1372
+
   /**
    * The number of bytes in a file id.
    */
