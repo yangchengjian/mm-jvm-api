@@ -533,6 +533,16 @@ trait ToxCore extends Closeable with ToxCoreEventSynth {
   @throws[ToxConferenceIdException]
   def conferenceId(conferenceNumber: ToxConferenceNumber): ToxConferenceId
 
+  @throws[ToxConferenceTitleException]
+  def conferenceSetTitle(conferenceNumber: ToxConferenceNumber, @NotNull title: ToxConferenceTitle): Unit
+
+  @NotNull
+  @throws[ToxConferenceTitleException]
+  def conferenceGetTitle(conferenceNumber: ToxConferenceNumber): ToxConferenceTitle
+
+  @throws[ToxConferenceTitleException]
+  def conferenceGetTitleSize(conferenceNumber: ToxConferenceNumber): Int
+
   @throws[ToxConferenceInviteException]
   def conferenceInvite(friendNumber: ToxFriendNumber, conferenceNumber: ToxConferenceNumber): Unit
 
