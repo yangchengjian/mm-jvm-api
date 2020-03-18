@@ -534,21 +534,29 @@ trait ToxCore extends Closeable with ToxCoreEventSynth {
   def conferenceId(conferenceNumber: ToxConferenceNumber): ToxConferenceId
 
   @throws[ToxConferenceTitleException]
-  def conferenceSetTitle(conferenceNumber: ToxConferenceNumber, @NotNull title: ToxConferenceTitle): Unit
+  def conferenceSetTitle(conferenceNumber: ToxConferenceNumber, title: ToxConferenceTitle): Unit
 
-  @NotNull
   @throws[ToxConferenceTitleException]
   def conferenceGetTitle(conferenceNumber: ToxConferenceNumber): ToxConferenceTitle
 
   @throws[ToxConferenceTitleException]
   def conferenceGetTitleSize(conferenceNumber: ToxConferenceNumber): Int
 
+  @throws[ToxConferencePeerQueryException]
+  def conferencePeerGetName(conferenceNumber: ToxConferenceNumber, peerNumber: ToxPeerNumber): ToxConferencePeerName
+
+  @throws[ToxConferencePeerQueryException]
+  def conferencePeerGetNameSize(conferenceNumber: ToxConferenceNumber, peerNumber: ToxPeerNumber): Int
+
+  @throws[ToxConferencePeerQueryException]
+  def conferencePeerCount(conferenceNumber: ToxConferenceNumber): Int
+
   @throws[ToxConferenceInviteException]
   def conferenceInvite(friendNumber: ToxFriendNumber, conferenceNumber: ToxConferenceNumber): Unit
 
   @throws[ToxConferenceJoinException]
-  def conferenceJoin(friendNumber: ToxFriendNumber, @NotNull cookie: ToxConferenceCookie): ToxConferenceNumber
+  def conferenceJoin(friendNumber: ToxFriendNumber, cookie: ToxConferenceCookie): ToxConferenceNumber
 
   @throws[ToxConferenceSendMessageException]
-  def conferenceSendMessage(conferenceNumber: ToxConferenceNumber, @NotNull messageType: ToxMessageType, timeDelta: Int, @NotNull message: ToxConferenceMessage): Boolean
+  def conferenceSendMessage(conferenceNumber: ToxConferenceNumber, messageType: ToxMessageType, timeDelta: Int, @NotNull message: ToxConferenceMessage): Boolean
 }

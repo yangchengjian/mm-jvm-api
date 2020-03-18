@@ -6,7 +6,6 @@ import org.jetbrains.annotations.NotNull;
 public final class ToxConferenceTitleException extends ToxException<ToxConferenceTitleException.Code> {
 
   public enum Code {
-    NULL,
     CONFERENCE_NOT_FOUND,
     INVALID_LENGTH,
     FAIL_SEND,

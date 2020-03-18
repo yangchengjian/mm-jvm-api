@@ -48,6 +48,8 @@ object ToxCoreConstants {
   val MaxConferenceLength = 1372
 
   val MaxConferenceTitleLength = 1007
+
+  val MaxConferencePeerNameLength = 1007
   /**
    * Maximum size of custom packets. TODO: should be LENGTH?
    */
